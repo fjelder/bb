@@ -10,3 +10,31 @@
     font-family: "Inter var", sans-serif;
   }
 }
+header {
+  position: relative;
+}
+header ul.menu {
+  @apply flex items-center justify-start pl-24 text-base tracking-wide text-slate-700;
+}
+header ul.menu li {
+  @apply px-4;
+}
+header ul.menu li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+  @apply bg-teal-800;
+}
+header ul.menu li:hover::after {
+  width: 100%;
+}
+header ul.menu li a {
+  @apply font-medium;
+}
+
+header ul.menu li a:hover {
+  @apply text-teal-700;
+}

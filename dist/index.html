@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
   <meta charset="UTF-8">
@@ -12,12 +12,22 @@
 
 <body class="">
   <!-- nagłówek -->
-  <section class="relative bg-[url(img/6.jpg)] bg-cover bg-center bg-no-repeat shadow-lg mb-24">
+  <section
+    class="relative bg-[url(img/6.jpg)] bg-cover bg-center bg-no-repeat shadow-lg min-h-screen mb-24 flex flex-col">
+
+
     <div class="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/75 sm:to-white/25">
     </div>
-
-    <div
-      class="relative max-w-screen-xl px-4 py-32 mx-auto sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8 lg:justify-left">
+    <header class="py-12">
+      <ul class="menu">
+        <li><a href="" class="active">Poznajmy się</a></li>
+        <li><a href="">Klienci indywidualni</a></li>
+        <li><a href="">Deweloperzy</a></li>
+        <li><a href="">Firmy i przedsiębiorstwa</a></li>
+        <li><a href="">Kontakt</a></li>
+      </ul>
+    </header>
+    <div class="relative flex items-center justify-start flex-1 w-full px-8 mx-auto max-w-7xl sm:px-6">
       <div class="max-w-xl text-center sm:text-left">
         <div class="flex items-center space-x-5">
 
@@ -29,12 +39,12 @@
             <h1 class="text-3xl font-extrabold sm:text-5xl">
               Best - Bruk
 
-              <strong class="block font-extrabold text-emerald-700">
+              <strong class="block font-extrabold text-teal-700">
                 Brukarstwo
               </strong>
 
             </h1>
-            <p class="max-w-lg mt-4 text-gray-600 sm:text-xl sm:leading-relaxed">
+            <p class="max-w-lg mt-4 text-zinc-600 sm:text-xl sm:leading-relaxed">
               Specjaliści w swoim fachu!
             </p>
           </div>
@@ -43,12 +53,12 @@
 
         <div class="flex justify-around gap-4 mt-8 text-center">
           <a href="#"
-            class="block w-full px-12 py-3 text-sm font-medium tracking-wider text-white rounded shadow bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring active:bg-emerald-500 sm:w-auto2">
+            class="block w-full px-12 py-3 text-sm font-medium tracking-wider text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto2">
             Oferta
           </a>
 
           <a href="#"
-            class="block w-full px-12 py-3 text-sm font-medium tracking-wider bg-white rounded shadow text-emerald-600 hover:text-emerald-700 focus:outline-none focus:ring active:text-emerald-500 sm:w-auto2">
+            class="block w-full px-12 py-3 text-sm font-medium tracking-wider text-teal-600 bg-white rounded shadow hover:text-teal-700 focus:outline-none focus:ring active:text-teal-500 sm:w-auto2">
             Kontakt
           </a>
         </div>
@@ -64,24 +74,25 @@
 
 
     <div class="relative w-full">
-      <h2 class="inline-block pb-4 pr-10 text-3xl font-semibold text-gray-600 border-b-4 border-red-400">
-        O nas
+      <h2 class="inline-block pb-4 pr-10 text-3xl font-semibold border-b-4 border-teal-400 text-zinc-600">
+        Poznajmy się!
       </h2>
 
-      <div class="absolute bottom-0 w-full border-b-4 border-gray-300/20">
+      <div class="absolute bottom-0 w-full border-b-4 border-zinc-300/20">
       </div>
     </div>
 
 
-    <div class="flex mt-12 space-x-6">
-      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptates minima hic ad nesciunt
-        aspernatur voluptatem fugiat vero, esse magnam culpa libero accusantium impedit voluptate natus odio
-        praesentium laborum. Similique incidunt expedita nostrum doloremque placeat sint rerum. Suscipit eaque quod
-        architecto iure ex aut at, fugiat ut ea dignissimos et? Itaque qui, odit eius ex similique tempora laboriosam
-        non? Nobis excepturi autem modi asperiores ipsa accusamus accusantium sint rem velit repellendus placeat iure
-        ducimus aspernatur maiores vero numquam totam quasi, nesciunt sequi eos fugiat ipsum officiis minus. Expedita,
-        quae voluptatum? Deserunt harum, blanditiis eligendi ullam possimus vero magnam libero accusamus?</div>
-      <div class="shadow-xl">
+    <div class="flex mt-12">
+      <div class="flex-1 mx-6 mt-6">
+        <p class="text-justify">Firmę założyłem w 2010 r. Pasją do brukarstwa zaraził mnie mój tata. Przejętą od niego
+          ideę wykonywania
+          usług rzetelnie a prac brukarskich zawsze na solidnej podbudowie realizuję za pomocą nowoczesnego sprzętu i
+          wciąż rozwijającego się parku maszynowego. Posiadam koparki kołowe wyposażone w wielofunkcyjne głowice
+          wychylno-obrotowe, dzięki którym usługi są wykonywane sprawniej i szybciej, co obniża znacznie ich koszt.
+          Usługi świadczę na terenie Poznania, Borku Wlkp. i okolic. Zapraszam do kontaktu.</p>
+      </div>
+      <div class="flex-1 mx-6 shadow-xl">
         <img src="img/1.jpg" alt="" srcset="" class="rounded-md">
       </div>
     </div>
@@ -90,11 +101,32 @@
   <!-- Realizacje -->
   <section class="mx-auto mb-24 max-w-7xl">
     <div class="relative w-full">
-      <h2 class="inline-block pb-4 pr-10 text-3xl font-semibold text-gray-600 border-b-4 border-red-400">
-        Nasze realizacje
+      <h2 class="inline-block pb-4 pr-10 text-3xl font-semibold border-b-4 border-teal-400 text-zinc-600">
+        Klienci indywidualni
       </h2>
 
-      <div class="absolute bottom-0 w-full border-b-4 border-gray-300/20">
+      <div class="absolute bottom-0 w-full border-b-4 border-zinc-300/20">
+      </div>
+    </div>
+    <div class="flex flex-row-reverse mt-12">
+      <div class="flex-1 mx-6 mt-6">
+        <p class="text-justify">Masz dosyć ciągłego wnoszenia piasku i błota do domu? Z nami wylądujesz na bruku!
+          Wykonujemy:
+
+        <ul>
+          <li>dojazdy, podjazdy i wjazdy,</li>
+          <li>wejścia, obejścia, przejścia,</li>
+          <li>palisady, tarasy, schody,</li>
+          <li>odwodnienia z dachów, przyłącza kanalizacyjne, kratki odwodnieniowe,</li>
+          <li>montaż ogrodzeń i płotów panelowych.</li>
+        </ul>
+
+
+
+        Wykończyłeś dom i brakuje środków? Utwardzimy dojazd lub wykonamy podbudowę pod przyszłą inwestycję.</p>
+      </div>
+      <div class="flex-1 mx-6 shadow-xl">
+        <img src="img/2.jpg" alt="" srcset="" class="rounded-md">
       </div>
     </div>
 
@@ -134,11 +166,11 @@
 
 
   <footer
-    class="p-4 mx-auto mt-24 bg-white border-t md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 max-w-7xl">
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/"
+    class="p-4 mx-auto mt-24 bg-white border-t md:flex md:items-center md:justify-between md:p-6 dark:bg-zinc-800 max-w-7xl">
+    <span class="text-sm text-zinc-500 sm:text-center dark:text-zinc-400">© 2023 <a href="https://flowbite.com/"
         class="hover:underline">Best - Bruk™</a>. <small>Wszystkie prawa zastrzeżone.</small>
     </span>
-    <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+    <ul class="flex flex-wrap items-center mt-3 text-sm text-zinc-500 dark:text-zinc-400 sm:mt-0">
       <li>
         <a href="#" class="mr-4 hover:underline md:mr-6 ">O nas</a>
       </li>
