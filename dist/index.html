@@ -11,6 +11,77 @@
 </head>
 
 <body class="">
+  <section class="bg-white dark:bg-gray-900">
+    <nav x-data="{ isOpen: false }" class="container p-6 mx-auto lg:flex lg:justify-between lg:items-center">
+      <div class="flex items-center justify-between">
+        <a href="#">
+          <img class="w-auto h-6 sm:h-7" src="https://merakiui.com/images/full-logo.svg" alt="">
+        </a>
+
+        <!-- Mobile menu button -->
+        <div class="flex lg:hidden">
+          <button x-cloak @click="isOpen = !isOpen" type="button"
+            class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+            aria-label="toggle menu">
+            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+            </svg>
+
+            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+      <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
+        class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white shadow-md lg:bg-transparent lg:dark:bg-transparent lg:shadow-none dark:bg-gray-900 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
+        <div class="flex flex-col space-y-4 lg:mt-0 lg:flex-row lg:-px-8 lg:space-y-0">
+          <a class="text-gray-700 transition-colors duration-300 transform lg:mx-8 dark:text-gray-200 dark:hover:text-teal-400 hover:text-teal-500"
+            href="#">Poznajmy się</a>
+          <a class="text-gray-700 transition-colors duration-300 transform lg:mx-8 dark:text-gray-200 dark:hover:text-teal-400 hover:text-teal-500"
+            href="#">Klienci indywidualni</a>
+          <a class="text-gray-700 transition-colors duration-300 transform lg:mx-8 dark:text-gray-200 dark:hover:text-teal-400 hover:text-teal-500"
+            href="#">Deweloperzy</a>
+          <a class="text-gray-700 transition-colors duration-300 transform lg:mx-8 dark:text-gray-200 dark:hover:text-teal-400 hover:text-teal-500"
+            href="#">Firmy i przedsiębiorstwa</a>
+          <a class="text-gray-700 transition-colors duration-300 transform lg:mx-8 dark:text-gray-200 dark:hover:text-teal-400 hover:text-teal-500"
+            href="#">Kontakt</a>
+        </div>
+
+        <a class="block px-4 py-2 mt-4 text-sm text-center text-white capitalize bg-teal-600 rounded-lg lg:mt-0 hover:bg-teal-500 lg:w-auto"
+          href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+          </svg>
+
+        </a>
+      </div>
+    </nav>
+
+    <div class="container px-6 py-16 mx-auto text-center">
+      <div class="max-w-lg mx-auto">
+        <h1 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">Szukasz sprawdzonego wykonawcy
+          robót ziemnych?</h1>
+        <p class="mt-6 text-gray-500 dark:text-gray-300">Zapraszamy do kontaktu wszystkich, których interesuje usługa
+          wykonana solidnie i terminowo.</p>
+        <button
+          class="px-5 py-2 mt-6 text-sm font-medium leading-5 text-center text-white bg-teal-600 rounded-lg hover:bg-teal-500 lg:mx-0 lg:w-auto focus:outline-none">
+          Skontakuj się z nami!
+        </button>
+        <p class="mt-3 text-sm text-gray-400 ">Zapoznaj się z naszą ofertą i sprawdź jak działamy.</p>
+      </div>
+
+      <div class="flex justify-center mt-10">
+        <img class="object-cover w-full h-96 rounded-xl lg:w-4/5" src="img/12.jpg" />
+      </div>
+    </div>
+  </section>
   <!-- nagłówek -->
   <section
     class="relative bg-[url(img/6.jpg)] bg-cover bg-center bg-no-repeat shadow-lg min-h-screen mb-24 flex flex-col">
@@ -20,7 +91,7 @@
     </div>
     <header class="py-12">
       <ul class="menu">
-        <li><a href="" class="active">Poznajmy się</a></li>
+        <li><a href="#poznajmy-sie" class="active">Poznajmy się</a></li>
         <li><a href="">Klienci indywidualni</a></li>
         <li><a href="">Deweloperzy</a></li>
         <li><a href="">Firmy i przedsiębiorstwa</a></li>
@@ -31,7 +102,7 @@
       <div class="max-w-xl text-center sm:text-left">
         <div class="flex items-center space-x-5">
 
-          <img class="w-24 h-24 rounded-full" src="http://www.best-bruk.com/wp-content/uploads/2018/06/favicon.jpg">
+          <img class="w-32 h-32 rounded-full" src="http://www.best-bruk.com/wp-content/uploads/2018/06/favicon.jpg">
 
           <div>
 
@@ -69,7 +140,7 @@
 
 
   <!-- O nas -->
-  <section class="mx-auto mb-24 max-w-7xl">
+  <section class="mx-auto mb-24 max-w-7xl" id="poznajmy-sie">
 
 
 

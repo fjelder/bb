@@ -25,7 +25,7 @@ header ul.menu li::after {
   height: 2px;
   display: block;
   margin: auto;
-  transition: 0.5s;
+  transition: 0.6s;
   @apply bg-teal-800;
 }
 header ul.menu li:hover::after {
@@ -37,4 +37,7 @@ header ul.menu li a {
 
 header ul.menu li a:hover {
   @apply text-teal-700;
+}
+header.sticky {
+  @apply fixed;
 }
