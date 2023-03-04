@@ -7,255 +7,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 </head>
 
 <body class="">
-  <section class="bg-white dark:bg-gray-900">
-    <nav x-data="{ isOpen: false }" class="container p-6 mx-auto lg:flex lg:justify-between lg:items-center">
-      <div class="flex items-center justify-between">
-        <a href="#">
-          <img class="w-auto h-6 sm:h-7" src="https://merakiui.com/images/full-logo.svg" alt="">
-        </a>
 
-        <!-- Mobile menu button -->
-        <div class="flex lg:hidden">
-          <button x-cloak @click="isOpen = !isOpen" type="button"
-            class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
-            aria-label="toggle menu">
-            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
-            </svg>
+  <section id="home" class="main" data-aos="fade-down">
 
-            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
+    <div
+      class="relative flex flex-col-reverse justify-center min-h-screen py-20 border-b shadow-md lg:py-16 lg:pt-0 lg:flex-col lg:pb-0">
+      <div
+        class="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
+        <svg class="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block" viewBox="0 0 100 100"
+          fill="currentColor" preserveAspectRatio="none slice">
+          <path d="M50 0H100L50 100H0L50 0Z"></path>
+        </svg>
+        <img class="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
+          src="img/4.jpg" alt="" />
       </div>
 
-      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-      <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
-        class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white shadow-md lg:bg-transparent lg:dark:bg-transparent lg:shadow-none dark:bg-gray-900 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
-        <div class="flex flex-col space-y-4 lg:mt-0 lg:flex-row lg:-px-8 lg:space-y-0">
-          <a class="text-gray-700 transition-colors duration-300 transform lg:mx-8 dark:text-gray-200 dark:hover:text-teal-400 hover:text-teal-500"
-            href="#">Poznajmy się</a>
-          <a class="text-gray-700 transition-colors duration-300 transform lg:mx-8 dark:text-gray-200 dark:hover:text-teal-400 hover:text-teal-500"
-            href="#">Klienci indywidualni</a>
-          <a class="text-gray-700 transition-colors duration-300 transform lg:mx-8 dark:text-gray-200 dark:hover:text-teal-400 hover:text-teal-500"
-            href="#">Deweloperzy</a>
-          <a class="text-gray-700 transition-colors duration-300 transform lg:mx-8 dark:text-gray-200 dark:hover:text-teal-400 hover:text-teal-500"
-            href="#">Firmy i przedsiębiorstwa</a>
-          <a class="text-gray-700 transition-colors duration-300 transform lg:mx-8 dark:text-gray-200 dark:hover:text-teal-400 hover:text-teal-500"
-            href="#">Kontakt</a>
-        </div>
 
-        <a class="block px-4 py-2 mt-4 text-sm text-center text-white capitalize bg-teal-600 rounded-lg lg:mt-0 hover:bg-teal-500 lg:w-auto"
-          href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="w-5 h-5">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+
+
+      <nav class="absolute top-0 flex items-center justify-between w-full px-24 py-10">
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-12 mr-12 ionicon fill-zinc-800" viewBox="0 0 512 512">
+            <title>Logo Best Bruk</title>
+            <path
+              d="M126.12 315.1A47.06 47.06 0 1179.06 268h47.06zM149.84 315.1a47.06 47.06 0 0194.12 0v117.84a47.06 47.06 0 11-94.12 0zM196.9 126.12A47.06 47.06 0 11244 79.06v47.06zM196.9 149.84a47.06 47.06 0 010 94.12H79.06a47.06 47.06 0 010-94.12zM385.88 196.9a47.06 47.06 0 1147.06 47.1h-47.06zM362.16 196.9a47.06 47.06 0 01-94.12 0V79.06a47.06 47.06 0 1194.12 0zM315.1 385.88a47.06 47.06 0 11-47.1 47.06v-47.06zM315.1 362.16a47.06 47.06 0 010-94.12h117.84a47.06 47.06 0 110 94.12z" />
           </svg>
+          <ul class="flex space-x-5 menu2">
+            <li><a href="#poznajmy-sie">Poznajmy się</a></li>
+            <li><a href="#klienci-indywidualni">Klienci indywidualni</a></li>
+            <li><a href="#deweloperzy">Deweloperzy</a></li>
+            <li><a href="#firmy-przedsiebiorstwa">Firmy i przedsiebiorstwa</a></li>
+          </ul>
+        </div>
 
-        </a>
-      </div>
-    </nav>
-
-    <div class="container px-6 py-16 mx-auto text-center">
-      <div class="max-w-lg mx-auto">
-        <h1 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">Szukasz sprawdzonego wykonawcy
-          robót ziemnych?</h1>
-        <p class="mt-6 text-gray-500 dark:text-gray-300">Zapraszamy do kontaktu wszystkich, których interesuje usługa
-          wykonana solidnie i terminowo.</p>
-        <button
-          class="px-5 py-2 mt-6 text-sm font-medium leading-5 text-center text-white bg-teal-600 rounded-lg hover:bg-teal-500 lg:mx-0 lg:w-auto focus:outline-none">
-          Skontakuj się z nami!
-        </button>
-        <p class="mt-3 text-sm text-gray-400 ">Zapoznaj się z naszą ofertą i sprawdź jak działamy.</p>
-      </div>
-
-      <div class="flex justify-center mt-10">
-        <img class="object-cover w-full h-96 rounded-xl lg:w-4/5" src="img/12.jpg" />
-      </div>
-    </div>
-  </section>
-  <!-- nagłówek -->
-  <section
-    class="relative bg-[url(img/6.jpg)] bg-cover bg-center bg-no-repeat shadow-lg min-h-screen mb-24 flex flex-col">
+        <a href="#kontakt"
+          class="flex items-center px-4 py-4 mr-6 font-semibold text-teal-900 border shadow rounded-xl border-teal-900/10 bg-teal-200/50 hover:bg-teal-600 hover:text-white"><ion-icon
+            name="moon-outline" class="text-2xl font-semibold "></ion-icon></a>
 
 
-    <div class="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/75 sm:to-white/25">
-    </div>
-    <header class="py-12">
-      <ul class="menu">
-        <li><a href="#poznajmy-sie" class="active">Poznajmy się</a></li>
-        <li><a href="">Klienci indywidualni</a></li>
-        <li><a href="">Deweloperzy</a></li>
-        <li><a href="">Firmy i przedsiębiorstwa</a></li>
-        <li><a href="">Kontakt</a></li>
-      </ul>
-    </header>
-    <div class="relative flex items-center justify-start flex-1 w-full px-8 mx-auto max-w-7xl sm:px-6">
-      <div class="max-w-xl text-center sm:text-left">
-        <div class="flex items-center space-x-5">
-
-          <img class="w-32 h-32 rounded-full" src="http://www.best-bruk.com/wp-content/uploads/2018/06/favicon.jpg">
-
-          <div>
+      </nav>
 
 
-            <h1 class="text-3xl font-extrabold sm:text-5xl">
-              Best - Bruk
+      <div class="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
+        <div class="mb-16 lg:my-40 lg:pr-5 lg:w-1/2">
+          <p
+            class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-lg bg-zinc-200">
+            Specjaliści w swoim fachu!
+          </p>
+          <h2 class="font-semibold text-teal-700 text-8xl">
+            Best Bruk
+          </h2>
+          <p class="pr-5 mb-5 text-base text-justify text-gray-700 md:text-md">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta explicabo, excepturi, dolor optio autem
+            maxime maiores id ipsa ex nihil rem sit consectetur! Perspiciatis, mollitia
+          </p>
+          <p class="mb-6 font-semibold">Sprawdź nas i naszą ofertę.</p>
+          <div class="flex items-center">
+            <a href="#kontakt"
+              class="flex items-center px-8 py-4 mr-6 font-semibold tracking-wide bg-teal-400 rounded-md border-teal-600/80 text-zinc-100 hover:bg-teal-700"><ion-icon
+                name="call-outline" class="mr-4 text-2xl"></ion-icon>
+              Kontakt</a>
+            <div class="flex items-center mt-1 space-x-3">
+              <a href="https://www.facebook.com/" target="_blank" class="text-zinc-500 hover:text-zinc-800 ">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-6 transition-all duration-500 hover:h-8">
+                  <path
+                    d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z">
+                  </path>
+                </svg>
+              </a>
 
-              <strong class="block font-extrabold text-teal-700">
-                Brukarstwo
-              </strong>
-
-            </h1>
-            <p class="max-w-lg mt-4 text-zinc-600 sm:text-xl sm:leading-relaxed">
-              Specjaliści w swoim fachu!
-            </p>
+            </div>
           </div>
         </div>
-
-
-        <div class="flex justify-around gap-4 mt-8 text-center">
-          <a href="#"
-            class="block w-full px-12 py-3 text-sm font-medium tracking-wider text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto2">
-            Oferta
-          </a>
-
-          <a href="#"
-            class="block w-full px-12 py-3 text-sm font-medium tracking-wider text-teal-600 bg-white rounded shadow hover:text-teal-700 focus:outline-none focus:ring active:text-teal-500 sm:w-auto2">
-            Kontakt
-          </a>
-        </div>
       </div>
     </div>
   </section>
 
 
-
-  <!-- O nas -->
-  <section class="mx-auto mb-24 max-w-7xl" id="poznajmy-sie">
-
-
-
-    <div class="relative w-full">
-      <h2 class="inline-block pb-4 pr-10 text-3xl font-semibold border-b-4 border-teal-400 text-zinc-600">
-        Poznajmy się!
-      </h2>
-
-      <div class="absolute bottom-0 w-full border-b-4 border-zinc-300/20">
-      </div>
-    </div>
-
-
-    <div class="flex mt-12">
-      <div class="flex-1 mx-6 mt-6">
-        <p class="text-justify">Firmę założyłem w 2010 r. Pasją do brukarstwa zaraził mnie mój tata. Przejętą od niego
-          ideę wykonywania
-          usług rzetelnie a prac brukarskich zawsze na solidnej podbudowie realizuję za pomocą nowoczesnego sprzętu i
-          wciąż rozwijającego się parku maszynowego. Posiadam koparki kołowe wyposażone w wielofunkcyjne głowice
-          wychylno-obrotowe, dzięki którym usługi są wykonywane sprawniej i szybciej, co obniża znacznie ich koszt.
-          Usługi świadczę na terenie Poznania, Borku Wlkp. i okolic. Zapraszam do kontaktu.</p>
-      </div>
-      <div class="flex-1 mx-6 shadow-xl">
-        <img src="img/1.jpg" alt="" srcset="" class="rounded-md">
-      </div>
-    </div>
-
-  </section>
-  <!-- Realizacje -->
-  <section class="mx-auto mb-24 max-w-7xl">
-    <div class="relative w-full">
-      <h2 class="inline-block pb-4 pr-10 text-3xl font-semibold border-b-4 border-teal-400 text-zinc-600">
-        Klienci indywidualni
-      </h2>
-
-      <div class="absolute bottom-0 w-full border-b-4 border-zinc-300/20">
-      </div>
-    </div>
-    <div class="flex flex-row-reverse mt-12">
-      <div class="flex-1 mx-6 mt-6">
-        <p class="text-justify">Masz dosyć ciągłego wnoszenia piasku i błota do domu? Z nami wylądujesz na bruku!
-          Wykonujemy:
-
-        <ul>
-          <li>dojazdy, podjazdy i wjazdy,</li>
-          <li>wejścia, obejścia, przejścia,</li>
-          <li>palisady, tarasy, schody,</li>
-          <li>odwodnienia z dachów, przyłącza kanalizacyjne, kratki odwodnieniowe,</li>
-          <li>montaż ogrodzeń i płotów panelowych.</li>
-        </ul>
-
-
-
-        Wykończyłeś dom i brakuje środków? Utwardzimy dojazd lub wykonamy podbudowę pod przyszłą inwestycję.</p>
-      </div>
-      <div class="flex-1 mx-6 shadow-xl">
-        <img src="img/2.jpg" alt="" srcset="" class="rounded-md">
-      </div>
-    </div>
-
-    <div class="flex cards">
-      <div class="card bg-[url('img/1.jpg')] group">
-        <div class="items-end justify-end hidden h-full pb-12 pr-12 space-x-3 group-hover:flex">
-          <img src="img/6.jpg" alt="" class="">
-          <img src="img/13.jpg" alt="" class="">
-          <img src="img/7.jpg" alt="" class="">
-          <img src="img/2.jpg" alt="" class="">
-        </div>
-      </div>
-      <div class=" card bg-[url('img/2.jpg')]">
-      </div>
-      <div class="card bg-[url('img/3.jpg')]">
-      </div>
-      <div class="card bg-[url('img/4.jpg')]">
-      </div>
-      <div class="card bg-[url('img/5.jpg')]">
-      </div>
-      <div class="card bg-[url('img/6.jpg')]">
-      </div>
-    </div>
-  </section>
-
-  <div class="flex mx-auto max-w-7xl">
-    <a data-fslightbox="second-lightbox" href="/img/5.jpg" class="h-auto w-96">
-      <img src="/img/5.jpg" alt="" class="w-96">
-    </a>
-    <a data-fslightbox="second-lightbox" href="/img/6.jpg" class="h-auto w-96">
-      <img src="/img/6.jpg" alt="" class="w-96">
-    </a>
-    <a data-fslightbox="second-lightbox" href="/img/7.jpg" class="h-auto w-96">
-      <img src="/img/7.jpg" alt="" class="w-96">
-    </a>
-  </div>
-
-
-  <footer
-    class="p-4 mx-auto mt-24 bg-white border-t md:flex md:items-center md:justify-between md:p-6 dark:bg-zinc-800 max-w-7xl">
-    <span class="text-sm text-zinc-500 sm:text-center dark:text-zinc-400">© 2023 <a href="https://flowbite.com/"
-        class="hover:underline">Best - Bruk™</a>. <small>Wszystkie prawa zastrzeżone.</small>
-    </span>
-    <ul class="flex flex-wrap items-center mt-3 text-sm text-zinc-500 dark:text-zinc-400 sm:mt-0">
-      <li>
-        <a href="#" class="mr-4 hover:underline md:mr-6 ">O nas</a>
-      </li>
-      <li>
-        <a href="#" class="mr-4 hover:underline md:mr-6">Oferta</a>
-      </li>
-      <li>
-        <a href="#" class="mr-4 hover:underline md:mr-6">Realizacje</a>
-      </li>
-      <li>
-        <a href="#" class="hover:underline">Kontakt</a>
-      </li>
-    </ul>
-  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
