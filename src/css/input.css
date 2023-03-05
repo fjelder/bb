@@ -72,3 +72,14 @@ nav ul.menu2 li::after {
 nav ul.menu2 li:hover::after {
   width: 100%;
 }
+ul.list li {
+  display: flex;
+  align-items: start;
+  margin-bottom: 5px;
+}
+ul.list li span {
+  margin-left: 15px;
+}
+ul.list li ion-icon {
+  padding-top: 5px;
+}
