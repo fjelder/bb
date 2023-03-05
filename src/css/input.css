@@ -72,6 +72,10 @@ nav ul.menu2 li::after {
 nav ul.menu2 li:hover::after {
   width: 100%;
 }
+nav ul.menu2 li a.links.active,
+nav ul.menu2 li::after {
+  width: 100%;
+}
 ul.list li {
   display: flex;
   align-items: start;

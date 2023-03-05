@@ -1,247 +1,403 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link href="style.css" rel="stylesheet" />
-    <script src="//unpkg.com/alpinejs" defer></script>
-  </head>
 
-  <body
-    class=""
-    x-data="{ atTop: false }"
-    x-init="atTop = (window.scrollY < 0) ? false : true"
-  >
-    <section id="home" class="main" data-aos="fade-down">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body class="" x-data="{ atTop: false }" x-init="atTop = (window.scrollY < 0) ? false : true">
+  <section id="home" class="main" data-aos="fade-down">
+    <div
+      class="relative flex flex-col-reverse justify-center min-h-screen py-20 border-b lg:py-16 lg:pt-0 lg:flex-col lg:pb-0">
       <div
-        class="relative flex flex-col-reverse justify-center min-h-screen py-20 border-b lg:py-16 lg:pt-0 lg:flex-col lg:pb-0"
-      >
-        <div
-          class="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0"
-        >
-          <svg
-            class="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
-            viewBox="0 0 100 100"
-            fill="currentColor"
-            preserveAspectRatio="none slice"
-          >
-            <path d="M50 0H100L50 100H0L50 0Z"></path>
+        class="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
+        <svg class="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block" viewBox="0 0 100 100"
+          fill="currentColor" preserveAspectRatio="none slice">
+          <path d="M50 0H100L50 100H0L50 0Z"></path>
+        </svg>
+        <img class="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
+          src="img/4.jpg" alt="" />
+      </div>
+      <div class="bg-zinc-200"></div>
+      <nav
+        class="fixed top-0 left-0 right-0 z-10 flex items-center justify-between w-full px-24 py-10 transition-all duration-300 ease-in-out"
+        :class="{ 'bg-white border-b shadow-md py-2 px-32': atTop }"
+        @scroll.window="atTop = (window.pageYOffset < 25) ? false : true">
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-12 mr-12 ionicon fill-zinc-800" viewBox="0 0 512 512">
+            <title>Logo Best Bruk</title>
+            <path
+              d="M126.12 315.1A47.06 47.06 0 1179.06 268h47.06zM149.84 315.1a47.06 47.06 0 0194.12 0v117.84a47.06 47.06 0 11-94.12 0zM196.9 126.12A47.06 47.06 0 11244 79.06v47.06zM196.9 149.84a47.06 47.06 0 010 94.12H79.06a47.06 47.06 0 010-94.12zM385.88 196.9a47.06 47.06 0 1147.06 47.1h-47.06zM362.16 196.9a47.06 47.06 0 01-94.12 0V79.06a47.06 47.06 0 1194.12 0zM315.1 385.88a47.06 47.06 0 11-47.1 47.06v-47.06zM315.1 362.16a47.06 47.06 0 010-94.12h117.84a47.06 47.06 0 110 94.12z" />
           </svg>
-          <img
-            class="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
-            src="img/4.jpg"
-            alt=""
-          />
+          <ul class="flex space-x-5 menu2">
+            <li><a href="#poznajmy-sie" class="links">Poznajmy się</a></li>
+            <li><a href="#klienci-indywidualni" class="links">Klienci indywidualni</a></li>
+            <li><a href="#deweloperzy" class="links">Deweloperzy</a></li>
+            <li>
+              <a href="#firmy-i-przedsiebiorstwa" class="links">Firmy i przedsiebiorstwa</a>
+            </li>
+          </ul>
         </div>
-        <div class="bg-zinc-200"></div>
-        <nav
-          class="z-10 flex items-center justify-between w-full px-24 py-10 fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out"
-          :class="{ 'bg-white border-b shadow-md py-2 px-32': atTop }"
-          @scroll.window="atTop = (window.pageYOffset < 25) ? false : true"
-        >
+
+        <a href=" #kontakt"
+          class="flex items-center px-4 py-4 mr-6 font-semibold text-teal-900 border shadow rounded-xl border-teal-900/10 bg-teal-200/50 hover:bg-teal-600 hover:text-white"
+          :class="{ 'rounded-full bg-teal-50': atTop }"><ion-icon name="moon-outline"
+            class="text-2xl font-semibold"></ion-icon></a>
+      </nav>
+
+      <div class="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
+        <div class="mb-16 lg:my-40 lg:pr-5 lg:w-1/2">
+          <p
+            class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-lg bg-zinc-200">
+            Specjaliści w swoim fachu!
+          </p>
+          <h2 class="font-semibold text-teal-700 text-8xl">Best Bruk</h2>
+          <p class="pr-5 mb-5 text-base text-justify text-gray-700 md:text-md">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+            explicabo, excepturi, dolor optio autem maxime maiores id ipsa ex
+            nihil rem sit consectetur! Perspiciatis, mollitia
+          </p>
+          <p class="mb-6 font-semibold">Sprawdź nas i naszą ofertę.</p>
           <div class="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-16 h-12 mr-12 ionicon fill-zinc-800"
-              viewBox="0 0 512 512"
-            >
-              <title>Logo Best Bruk</title>
-              <path
-                d="M126.12 315.1A47.06 47.06 0 1179.06 268h47.06zM149.84 315.1a47.06 47.06 0 0194.12 0v117.84a47.06 47.06 0 11-94.12 0zM196.9 126.12A47.06 47.06 0 11244 79.06v47.06zM196.9 149.84a47.06 47.06 0 010 94.12H79.06a47.06 47.06 0 010-94.12zM385.88 196.9a47.06 47.06 0 1147.06 47.1h-47.06zM362.16 196.9a47.06 47.06 0 01-94.12 0V79.06a47.06 47.06 0 1194.12 0zM315.1 385.88a47.06 47.06 0 11-47.1 47.06v-47.06zM315.1 362.16a47.06 47.06 0 010-94.12h117.84a47.06 47.06 0 110 94.12z"
-              />
-            </svg>
-            <ul class="flex space-x-5 menu2">
-              <li><a href="#poznajmy-sie">Poznajmy się</a></li>
-              <li><a href="#klienci-indywidualni">Klienci indywidualni</a></li>
-              <li><a href="#deweloperzy">Deweloperzy</a></li>
-              <li>
-                <a href="#firmy-przedsiebiorstwa">Firmy i przedsiebiorstwa</a>
-              </li>
-            </ul>
-          </div>
-
-          <a
-            href="#kontakt"
-            class="flex items-center px-4 py-4 mr-6 font-semibold text-teal-900 border shadow rounded-xl border-teal-900/10 bg-teal-200/50 hover:bg-teal-600 hover:text-white"
-            :class="{ 'rounded-full bg-teal-50': atTop }"
-            ><ion-icon
-              name="moon-outline"
-              class="text-2xl font-semibold"
-            ></ion-icon
-          ></a>
-        </nav>
-
-        <div
-          class="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl"
-        >
-          <div class="mb-16 lg:my-40 lg:pr-5 lg:w-1/2">
-            <p
-              class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-lg bg-zinc-200"
-            >
-              Specjaliści w swoim fachu!
-            </p>
-            <h2 class="font-semibold text-teal-700 text-8xl">Best Bruk</h2>
-            <p
-              class="pr-5 mb-5 text-base text-justify text-gray-700 md:text-md"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-              explicabo, excepturi, dolor optio autem maxime maiores id ipsa ex
-              nihil rem sit consectetur! Perspiciatis, mollitia
-            </p>
-            <p class="mb-6 font-semibold">Sprawdź nas i naszą ofertę.</p>
-            <div class="flex items-center">
-              <a
-                href="#kontakt"
-                class="flex items-center px-8 py-4 mr-6 font-semibold tracking-wide bg-teal-400 rounded-md border-teal-600/80 text-zinc-100 hover:bg-teal-700"
-                ><ion-icon name="call-outline" class="mr-4 text-2xl"></ion-icon>
-                Kontakt</a
-              >
-              <div class="flex items-center mt-1 space-x-3">
-                <a
-                  href="https://www.facebook.com/"
-                  target="_blank"
-                  class="text-zinc-500 hover:text-zinc-800"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="h-6 transition-all duration-500 hover:h-8"
-                  >
-                    <path
-                      d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
+            <a href="#kontakt"
+              class="flex items-center px-8 py-4 mr-6 font-semibold tracking-wide bg-teal-400 rounded-md border-teal-600/80 text-zinc-100 hover:bg-teal-700"><ion-icon
+                name="call-outline" class="mr-4 text-2xl"></ion-icon>
+              Kontakt</a>
+            <div class="flex items-center mt-1 space-x-3">
+              <a href="https://www.facebook.com/" target="_blank" class="text-zinc-500 hover:text-zinc-800">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-6 transition-all duration-500 hover:h-8">
+                  <path
+                    d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z">
+                  </path>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section
-      class="bg-gray-100 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center mt-24"
-    >
-      <div
-        class="overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl flex-row-reverse"
-      >
-        <div class="lg:w-1/2">
-          <div
-            class="h-64 bg-cover lg:h-full"
-            style="
+  <section id="poznajmy-sie" class="mt-24 bg-gray-100 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
+    <div
+      class="flex-row-reverse overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl">
+      <div class="lg:w-1/2">
+        <div class="h-64 bg-cover lg:h-full" style="
               background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
-            "
-          ></div>
-        </div>
-
-        <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
-          <h2
-            class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl"
-          >
-            Poznajmy się <span class="text-teal-500">bardziej</span>
-          </h2>
-
-          <p class="mt-4 text-gray-500 dark:text-gray-300">
-            Firmę założyłem w 2010 r. Pasją do brukarstwa zaraził mnie mój tata.
-            Przejętą od niego ideę wykonywania usług rzetelnie a prac
-            brukarskich zawsze na solidnej podbudowie realizuję za pomocą
-            nowoczesnego sprzętu i wciąż rozwijającego się parku maszynowego.
-            Posiadam koparki kołowe wyposażone w wielofunkcyjne głowice
-            wychylno-obrotowe, dzięki którym usługi są wykonywane sprawniej i
-            szybciej, co obniża znacznie ich koszt. Usługi świadczę na terenie
-            Poznania, Borku Wlkp. i okolic. Zapraszam do kontaktu.
-          </p>
-
-          <div class="inline-flex w-full mt-6 sm:w-auto">
-            <a
-              href="#"
-              class="inline-flex items-center justify-center w-full px-6 py-2 text-sm text-white duration-300 bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80"
-            >
-              --
-            </a>
-          </div>
-        </div>
+            "></div>
       </div>
-    </section>
 
-    <section class="dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center mt-24">
-      <div
-        class="overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl"
-      >
-        <div class="lg:w-1/2">
-          <div
-            class="h-64 bg-cover lg:h-full"
-            style="background-image: url('img/6.jpg')"
-          ></div>
-        </div>
+      <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
+          Poznajmy się <span class="text-teal-500">bardziej</span>
+        </h2>
 
-        <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
-          <h2
-            class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl"
-          >
-            Klienci <span class="text-teal-500">indywidualni</span>
-          </h2>
-
-          <p class="mt-4 text-gray-500 dark:text-gray-300">
-            Masz dosyć ciągłego wnoszenia piasku i błota do domu? Z nami
-            wylądujesz na bruku!
-          </p>
-          <p class="mt-2 text-gray-500 dark:text-gray-300">
-            Wykonujemy: 
-            <ul class="mt-2 text-gray-500 dark:text-gray-300 list">
-              <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>dojazdy,</span</li>
-              <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>podjazdy i wjazdy,</span></li>
-              <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>wejścia, obejścia, przejścia,</span></li>
-              <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>palisady, tarasy, schody,</span></li>
-              <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>odwodnienia z dachów, przyłącza kanalizacyjne, kratki odwodnieniowe,</span></li>
-              <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>montaż ogrodzeń i płotów panelowych.</span></li>
-            </ul>       
-          </p>
-          <p class="mt-2 text-gray-500 dark:text-gray-300">
-            Wykończyłeś dom i brakuje środków? Utwardzimy dojazd lub wykonamy
-            podbudowę pod przyszłą inwestycję.
-          </p>
-
-          <div class="inline-flex w-full mt-6 sm:w-auto">
-            <a
-              href="#"
-              class="inline-flex items-center justify-center w-full px-6 py-2 text-sm text-white duration-300 bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80"
-            >
-              --
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer
-      class="border-t border-x border-teal-300/10 bg-zinc-50 bottom-0 text-center max-w-7xl w-full left-1/2 -translate-x-1/2 text-zinc-500 text-sm py-2 px-6"
-      :class="{ fixed : atTop}"
-    >
-      <div class="flex justify-between max-w-7xl mx-auto items-center">
-        <p>Best - Bruk © 2023r.</p>
-        <p class="flex items-center">
-          <ion-icon name="call-outline" class="mr-2"></ion-icon
-          ><span class="mr-2">+48 515 698 789</span>
-          <ion-icon name="mail-outline" class="mr-2"></ion-icon
-          ><span>biuro@kontakt.pl</span>
+        <p class="mt-4 text-gray-500 dark:text-gray-300">
+          Firmę założyłem w 2010 r. Pasją do brukarstwa zaraził mnie mój tata.
+          Przejętą od niego ideę wykonywania usług rzetelnie a prac
+          brukarskich zawsze na solidnej podbudowie realizuję za pomocą
+          nowoczesnego sprzętu i wciąż rozwijającego się parku maszynowego.
+          Posiadam koparki kołowe wyposażone w wielofunkcyjne głowice
+          wychylno-obrotowe, dzięki którym usługi są wykonywane sprawniej i
+          szybciej, co obniża znacznie ich koszt. Usługi świadczę na terenie
+          Poznania, Borku Wlkp. i okolic. Zapraszam do kontaktu.
         </p>
+
+        <div class="inline-flex w-full mt-6 sm:w-auto">
+          <a href="#"
+            class="inline-flex items-center justify-center w-full px-6 py-2 text-sm text-white duration-300 bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
+            --
+          </a>
+        </div>
       </div>
-    </footer>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+    </div>
+  </section>
+
+  <section class="mt-24 bg-white dark:bg-gray-900">
+    <div class="container px-6 py-12 mx-auto">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <svg class="w-8 h-8" viewBox="0 0 30 30" fill="none">
+            <path
+              d="M29.6931 14.2283L22.7556 6.87823C22.3292 6.426 21.6175 6.40538 21.1652 6.83212C20.7137 7.25851 20.6927 7.9706 21.1195 8.42248L27.3284 15L21.1195 21.5783C20.6927 22.0302 20.7137 22.7419 21.1652 23.1687C21.3827 23.3738 21.6606 23.4754 21.9374 23.4754C22.2363 23.4754 22.5348 23.3569 22.7557 23.1233L29.6932 15.7729C30.1022 15.339 30.1023 14.6618 29.6931 14.2283Z"
+              fill="#2D3748" />
+            <path
+              d="M8.88087 21.578L2.67236 15L8.88087 8.42215C9.30726 7.97028 9.28664 7.25812 8.83476 6.83179C8.38323 6.4054 7.67073 6.42603 7.2444 6.87791L0.306858 14.2279C-0.102245 14.6614 -0.102245 15.3391 0.306858 15.7726L7.24475 23.123C7.466 23.3574 7.76413 23.4755 8.06302 23.4755C8.33976 23.4755 8.61767 23.3735 8.83476 23.1684C9.28705 22.742 9.30726 22.0299 8.88087 21.578Z"
+              fill="#2D3748" />
+            <path
+              d="M16.8201 3.08774C16.2062 2.99476 15.6317 3.41622 15.5379 4.03011L12.2379 25.6302C12.1441 26.2445 12.566 26.8186 13.1803 26.9124C13.238 26.921 13.295 26.9252 13.3516 26.9252C13.898 26.9252 14.3773 26.5266 14.4624 25.97L17.7624 4.3699C17.8562 3.7556 17.4343 3.1815 16.8201 3.08774Z"
+              fill="#4299E1" />
+          </svg>
+
+          <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Bezpłatny kosztorys prac</h1>
+
+          <p class="mt-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Dignissim fusce tortor, ac sed malesuada blandit. Et mi gravida sem feugiat.</p>
+        </div>
+
+        <div>
+          <svg class="w-8 h-8" viewBox="0 0 30 30" fill="none">
+            <path
+              d="M27.3633 7.08984H26.4844V6.21094C26.4844 4.75705 25.3015 3.57422 23.8477 3.57422H4.39453C2.94064 3.57422 1.75781 4.75705 1.75781 6.21094V21.1523H0.878906C0.393516 21.1523 0 21.5459 0 22.0312V23.7891C0 25.2429 1.18283 26.4258 2.63672 26.4258H27.3633C28.8172 26.4258 30 25.2429 30 23.7891V9.72656C30 8.27268 28.8172 7.08984 27.3633 7.08984ZM3.51562 6.21094C3.51562 5.72631 3.9099 5.33203 4.39453 5.33203H23.8477C24.3323 5.33203 24.7266 5.72631 24.7266 6.21094V7.08984H20.332C18.8781 7.08984 17.6953 8.27268 17.6953 9.72656V21.1523H3.51562V6.21094ZM1.75781 23.7891V22.9102H17.6953V23.7891C17.6953 24.0971 17.7489 24.3929 17.8465 24.668H2.63672C2.15209 24.668 1.75781 24.2737 1.75781 23.7891ZM28.2422 23.7891C28.2422 24.2737 27.8479 24.668 27.3633 24.668H20.332C19.8474 24.668 19.4531 24.2737 19.4531 23.7891V9.72656C19.4531 9.24193 19.8474 8.84766 20.332 8.84766H27.3633C27.8479 8.84766 28.2422 9.24193 28.2422 9.72656V23.7891Z"
+              fill="#2D3748" />
+            <path
+              d="M24.7266 21.1523H22.9688C22.4834 21.1523 22.0898 21.5459 22.0898 22.0312C22.0898 22.5166 22.4834 22.9102 22.9688 22.9102H24.7266C25.212 22.9102 25.6055 22.5166 25.6055 22.0312C25.6055 21.5459 25.212 21.1523 24.7266 21.1523Z"
+              fill="#4299E1" />
+            <path
+              d="M23.8477 12.3633C24.3331 12.3633 24.7266 11.9698 24.7266 11.4844C24.7266 10.999 24.3331 10.6055 23.8477 10.6055C23.3622 10.6055 22.9688 10.999 22.9688 11.4844C22.9688 11.9698 23.3622 12.3633 23.8477 12.3633Z"
+              fill="#4299E1" />
+          </svg>
+
+          <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Gwarancja</h1>
+
+          <p class="mt-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Dignissim fusce tortor, ac sed malesuada blandit. Et mi gravida sem feugiat.</p>
+        </div>
+
+        <div>
+          <svg class="w-8 h-8" viewBox="0 0 30 30" fill="none">
+            <g clip-path="url(#clip0)">
+              <path
+                d="M26.599 4.339a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zM7.151 25.661a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zM23.486 13.163a8.636 8.636 0 00-1.19-2.873l1.123-1.123-2.592-2.59L19.705 7.7a8.636 8.636 0 00-2.873-1.19V4.921h-3.664v1.586a8.634 8.634 0 00-2.873 1.19l-1.122-1.12-2.592 2.589 1.123 1.123a8.636 8.636 0 00-1.19 2.873H4.922l-.002 3.663h1.592A8.626 8.626 0 007.704 19.7l-1.127 1.127 2.59 2.591 1.128-1.127a8.623 8.623 0 002.873 1.19v1.597h3.664v-1.597a8.628 8.628 0 002.873-1.19l1.128 1.128 2.59-2.592-1.127-1.127a8.627 8.627 0 001.19-2.873h1.593v-3.664h-1.593zM15 19.256a4.255 4.255 0 110-8.511 4.255 4.255 0 010 8.51z"
+                fill="#4299E1" />
+              <path
+                d="M5.276 23.2c-.42 0-.823.105-1.182.302A13.853 13.853 0 011.172 15C1.172 7.375 7.375 1.172 15 1.172c.927 0 1.854.092 2.754.274a.586.586 0 00.232-1.149A15.111 15.111 0 0015 0C10.993 0 7.226 1.56 4.393 4.393A14.902 14.902 0 000 15c0 3.37 1.144 6.66 3.228 9.296-.268.4-.413.872-.413 1.365 0 .657.257 1.275.721 1.74a2.444 2.444 0 001.74.721c.658 0 1.276-.256 1.74-.721.465-.465.721-1.083.721-1.74s-.256-1.276-.72-1.74a2.445 2.445 0 00-1.74-.72zm.912 3.373a1.28 1.28 0 01-.912.377 1.28 1.28 0 01-.911-.377 1.28 1.28 0 01-.378-.912c0-.344.134-.668.378-.912a1.28 1.28 0 01.911-.377c.345 0 .668.134.912.378.243.243.377.567.377.911 0 .344-.134.668-.377.912zM26.772 5.703a2.465 2.465 0 00-.308-3.104 2.446 2.446 0 00-1.74-.721c-.658 0-1.276.256-1.74.72a2.445 2.445 0 00-.721 1.74c0 .658.256 1.276.72 1.741.465.465 1.083.72 1.74.72.42 0 .824-.104 1.183-.3A13.854 13.854 0 0128.828 15c0 7.625-6.203 13.828-13.828 13.828-.918 0-1.836-.09-2.728-.269a.586.586 0 00-.23 1.15c.968.193 1.963.291 2.958.291 4.007 0 7.773-1.56 10.607-4.393A14.902 14.902 0 0030 15c0-3.37-1.145-6.66-3.228-9.297zm-2.96-.452a1.28 1.28 0 01-.377-.912c0-.344.134-.668.377-.911a1.28 1.28 0 01.912-.378 1.29 1.29 0 010 2.578 1.28 1.28 0 01-.912-.377z"
+                fill="#2D3748" />
+              <path
+                d="M12.582 25.078c0 .324.263.586.586.586h3.664a.586.586 0 00.586-.586v-1.136a9.179 9.179 0 002.199-.911l.802.802a.586.586 0 00.829 0l2.59-2.592a.586.586 0 000-.828l-.802-.802a9.169 9.169 0 00.911-2.199h1.132a.586.586 0 00.586-.585v-3.664a.586.586 0 00-.586-.586h-1.132a9.17 9.17 0 00-.911-2.199l.797-.797a.587.587 0 000-.829l-2.592-2.59a.586.586 0 00-.829 0l-.795.797a9.177 9.177 0 00-2.2-.912V4.922a.586.586 0 00-.585-.586h-3.664a.586.586 0 00-.586.586v1.126a9.169 9.169 0 00-2.199.91l-.796-.795a.586.586 0 00-.828 0l-2.592 2.59a.585.585 0 000 .828l.797.797a9.173 9.173 0 00-.911 2.199h-1.13a.586.586 0 00-.586.585l-.002 3.664a.585.585 0 00.586.586h1.132c.207.77.512 1.507.911 2.2l-.801.8a.586.586 0 000 .83l2.59 2.59a.586.586 0 00.829 0l.801-.801a9.185 9.185 0 002.2.911v1.136zm-1.97-3.28a.586.586 0 00-.732.078l-.713.714-1.761-1.763.712-.713a.586.586 0 00.078-.732 8.02 8.02 0 01-1.11-2.679.586.586 0 00-.572-.462H5.507l.002-2.492h1.005a.586.586 0 00.572-.463 8.022 8.022 0 011.11-2.678.586.586 0 00-.078-.733l-.708-.708 1.763-1.761.707.707c.196.196.5.228.733.078a8.016 8.016 0 012.678-1.11.586.586 0 00.463-.573v-1h2.492v1c0 .277.193.515.463.573a8.024 8.024 0 012.678 1.11c.232.15.537.118.732-.078l.708-.707 1.762 1.761-.708.708a.586.586 0 00-.078.732 8.027 8.027 0 011.11 2.679c.058.27.297.463.573.463h1.007v2.492h-1.007a.586.586 0 00-.573.462 8.02 8.02 0 01-1.11 2.679.586.586 0 00.078.732l.713.713-1.761 1.762-.714-.713a.586.586 0 00-.732-.078 8.027 8.027 0 01-2.678 1.11.586.586 0 00-.463.573v1.011h-2.492v-1.01a.586.586 0 00-.463-.574 8.021 8.021 0 01-2.678-1.11z"
+                fill="#2D3748" />
+              <path
+                d="M19.841 15A4.847 4.847 0 0015 10.158 4.847 4.847 0 0010.158 15 4.847 4.847 0 0015 19.841 4.847 4.847 0 0019.841 15zm-8.51 0A3.674 3.674 0 0115 11.33 3.674 3.674 0 0118.67 15 3.674 3.674 0 0115 18.67 3.674 3.674 0 0111.33 15z"
+                fill="#2D3748" />
+              <path
+                d="M20.395 2.216a.59.59 0 00.415-.172.593.593 0 00.171-.415.59.59 0 00-.586-.586.589.589 0 00-.586.586.589.589 0 00.586.587zM9.63 27.794a.59.59 0 00-.586.586.59.59 0 00.586.586.59.59 0 00.586-.586.59.59 0 00-.586-.585z"
+                fill="#4299E1" />
+            </g>
+            <defs>
+              <clipPath id="clip0">
+                <path fill="#fff" d="M0 0h30v30H0z" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Indywidualne podejście</h1>
+
+          <p class="mt-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Dignissim fusce tortor, ac sed malesuada blandit. Et mi gravida sem feugiat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-24 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
+    <div
+      class="overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl">
+      <div class="lg:w-1/2">
+        <div class="h-64 bg-cover lg:h-full" style="background-image: url('img/12.jpg')"></div>
+      </div>
+
+      <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
+          Klienci <span class="text-teal-500">indywidualni</span>
+        </h2>
+
+        <p class="mt-4 text-gray-500 dark:text-gray-300">
+          Masz dosyć ciągłego wnoszenia piasku i błota do domu?
+        </p>
+        <p class="text-gray-500 dark:text-gray-300">
+          Z nami wylądujesz na <strong>bruku!</strong>
+        </p>
+        <p class="mt-2 text-gray-500 dark:text-gray-300">
+          Wykonujemy:
+        </p>
+        <ul class="mt-2 text-gray-500 dark:text-gray-300 list">
+          <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>dojazdy,</span< /li>
+          <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>podjazdy i wjazdy,</span></li>
+          <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>wejścia, obejścia, przejścia,</span></li>
+          <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>palisady, tarasy, schody,</span></li>
+          <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>odwodnienia z dachów, przyłącza kanalizacyjne,
+              kratki odwodnieniowe,</span></li>
+          <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>montaż ogrodzeń i płotów panelowych.</span></li>
+        </ul>
+
+        <p class="mt-2 text-gray-500 dark:text-gray-300">
+          Wykończyłeś dom i brakuje środków?
+        </p>
+        <p class="text-gray-500 dark:text-gray-300">
+          Utwardzimy dojazd lub wykonamy
+          podbudowę pod przyszłą inwestycję.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="deweloperzy" class="mt-24 bg-gray-100 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
+    <div
+      class="flex-row-reverse overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl">
+      <div class="lg:w-1/2">
+        <div class="h-64 bg-cover lg:h-full" style="
+              background-image: url('img/16.jpg');
+            "></div>
+      </div>
+
+      <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
+          Dewe<span class="text-teal-500">loperzy</span>
+        </h2>
+
+        <p class="mt-4 text-gray-500 dark:text-gray-300">
+          Stawiasz bliźniaki lub budujesz osiedle?
+        <p class="text-gray-500 dark:text-gray-300">
+          Kompleksowo zajmiemy się zagospodarowaniem terenu i wykonaniem prac
+          brukarskich.
+        </p>
+        <p class="mt-4 text-gray-500 dark:text-gray-300">
+          Wykonujemy:
+        </p>
+        <ul class="mt-2 text-gray-500 dark:text-gray-300 list">
+          <li><ion-icon name="checkmark-outline"></ion-icon><span>drogi dojazdowe i wewnętrzne,</span></li>
+          <li><ion-icon name="checkmark-outline"></ion-icon><span>drogi dojazdowe i wewnętrzne,</span></li>
+          <li><ion-icon name="checkmark-outline"></ion-icon><span>parkingi, chodniki, podjazdy do domów, rampy dla osób
+              niepełnosprawnych,</span></li>
+          <li><ion-icon name="checkmark-outline"></ion-icon><span>tarasy, opaski,</span></li>
+          <li><ion-icon name="checkmark-outline"></ion-icon><span>odwodnienia, przyłącza kanalizacji,</span></li>
+          <li><ion-icon name="checkmark-outline"></ion-icon><span>niwelację terenu i jego przygotowanie pod prace
+              ogrodnicze,</span></li>
+          <li><ion-icon name="checkmark-outline"></ion-icon><span>montaż ogrodzeń i płotów panelowych.</span></li>
+        </ul>
+
+
+        <p class="mt-4 text-gray-500 dark:text-gray-300">
+          Dopiero zaczynasz budowę?
+
+        </p>
+        <p class="text-gray-500 dark:text-gray-300">
+          Utwardzimy ci teren , wykonamy tymczasową drogę dojazdową, np. z płyt drogowych.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
+      <div class="flex flex-col justify-center">
+        <div class="max-w-xl mb-6">
+          <div>
+            <p
+              class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider uppercase bg-teal-400 rounded-full text-teal-50">
+              Doświadczenie / Rozwój
+            </p>
+          </div>
+          <h2
+            class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+            Szukając wykonawcy podstaw<br class="hidden md:block" />
+            na to co
+            <span class="inline-block text-teal-200 underline">ważne</span>
+          </h2>
+          <p class="text-base text-gray-700 md:text-lg">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam molestias ex quisquam numquam voluptates
+            facilis porro unde ipsam ipsa amet nesciunt mollitia, repellat, id nihil
+          </p>
+        </div>
+
+      </div>
+      <div class="relative">
+        <svg class="absolute w-full text-teal-400" fill="currentColor" viewBox="0 0 600 392">
+          <rect x="0" y="211" width="75" height="181" rx="8"></rect>
+          <rect x="525" y="260" width="75" height="132" rx="8"></rect>
+          <rect x="105" y="83" width="75" height="309" rx="8"></rect>
+          <rect x="210" y="155" width="75" height="237" rx="8"></rect>
+          <rect x="420" y="129" width="75" height="263" rx="8"></rect>
+          <rect x="315" y="0" width="75" height="392" rx="8"></rect>
+        </svg>
+        <svg class="relative w-full text-deep-purple-accent-400" fill="currentColor" viewBox="0 0 600 392">
+          <rect x="0" y="311" width="75" height="81" rx="8"></rect>
+          <rect x="525" y="351" width="75" height="41" rx="8"></rect>
+          <rect x="105" y="176" width="75" height="216" rx="8"></rect>
+          <rect x="210" y="237" width="75" height="155" rx="8"></rect>
+          <rect x="420" y="205" width="75" height="187" rx="8"></rect>
+          <rect x="315" y="83" width="75" height="309" rx="8"></rect>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="firmy-i-przedsiebiorstwa" class="mt-24 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
+    <div
+      class="overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl">
+      <div class="lg:w-1/2">
+        <div class="h-64 bg-cover lg:h-full" style="background-image: url('img/3.jpg')"></div>
+      </div>
+
+      <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
+          Firmy i <span class="text-teal-500">przedsiebiorstwa</span>
+        </h2>
+
+        <p class="mt-4 text-gray-500 dark:text-gray-300">
+          Realizujemy mniejsze, jak i większe (kilka - kilkanaście tysięcy m2) inwestycje, w tym:
+        </p>
+        <ul class="mt-2 text-gray-500 dark:text-gray-300 list">
+          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>drogi, parkingi,</span< /li>
+          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>place manewrowe, przeładunkowe, </span></li>
+          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>rampy załadunkowe,</span></li>
+          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>drogi dojazdowe, tymczasowe,</span></li>
+          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>kompleksowe roboty ziemne (wykopy, wywóz ziemi,
+              niwelacja terenu)</span></li>
+          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>roboty odwodnieniowe (kanalizacja deszczowa,
+              odwodnienia liniowe).</span></li>
+        </ul>
+
+        <p class="mt-2 text-gray-500 dark:text-gray-300">
+          Oferujemy również <strong>maszynowe</strong> układanie kostki.
+        </p>
+
+      </div>
+    </div>
+  </section>
+  <footer
+    class="bottom-0 w-full px-6 py-2 text-sm text-center -translate-x-1/2 border-t border-x border-teal-300/10 bg-zinc-50 max-w-7xl left-1/2 text-zinc-500"
+    :class="{ fixed : atTop}">
+    <div class="flex items-center justify-between mx-auto max-w-7xl">
+      <p>Best - Bruk © 2023r.</p>
+      <p class="flex items-center">
+        <ion-icon name="call-outline" class="mr-2"></ion-icon><span class="mr-2">+48 515 698 789</span>
+        <ion-icon name="mail-outline" class="mr-2"></ion-icon><span>biuro@kontakt.pl</span>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const li = document.querySelectorAll(".links");
+    // const lim = document.querySelectorAll(".m-links");
+    const sec = document.querySelectorAll("section");
+
+    console.log(li)
+    function activeMenu() {
+      let len = sec.length;
+      while (--len && window.scrollY + 180 < sec[len].offsetTop) { }
+      li.forEach((ltx) => ltx.classList.remove("active"));
+      li[len].classList.add("active");
+
+      // lim.forEach((ltx) => ltx.classList.remove("active"));
+      // lim[len].classList.add("active");
+    }
+    activeMenu();
+    window.addEventListener("scroll", function () {
+      activeMenu();
+    });
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>
