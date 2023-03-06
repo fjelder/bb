@@ -12,7 +12,10 @@
   <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
-<body class="" x-data="{ atTop: false }" x-init="atTop = (window.scrollY < 0) ? false : true">
+<body class="" x-data="{ atTop: false }" x-init="atTop = (window.scrollY <= 0) ? false : true">
+
+
+
   <section id="home" class="main" data-aos="fade-down">
     <div
       class="relative flex flex-col-reverse justify-center min-h-screen py-20 border-b lg:py-16 lg:pt-0 lg:flex-col lg:pb-0">
@@ -26,7 +29,7 @@
           src="img/4.jpg" alt="" />
       </div>
       <div class="bg-zinc-200"></div>
-      <nav
+      <div
         class="fixed top-0 left-0 right-0 z-10 flex items-center justify-between w-full px-24 py-10 transition-all duration-300 ease-in-out"
         :class="{ 'bg-white border-b shadow-md py-2 px-32': atTop }"
         @scroll.window="atTop = (window.pageYOffset < 25) ? false : true">
@@ -36,21 +39,20 @@
             <path
               d="M126.12 315.1A47.06 47.06 0 1179.06 268h47.06zM149.84 315.1a47.06 47.06 0 0194.12 0v117.84a47.06 47.06 0 11-94.12 0zM196.9 126.12A47.06 47.06 0 11244 79.06v47.06zM196.9 149.84a47.06 47.06 0 010 94.12H79.06a47.06 47.06 0 010-94.12zM385.88 196.9a47.06 47.06 0 1147.06 47.1h-47.06zM362.16 196.9a47.06 47.06 0 01-94.12 0V79.06a47.06 47.06 0 1194.12 0zM315.1 385.88a47.06 47.06 0 11-47.1 47.06v-47.06zM315.1 362.16a47.06 47.06 0 010-94.12h117.84a47.06 47.06 0 110 94.12z" />
           </svg>
-          <ul class="flex space-x-5 menu2">
-            <li><a href="#poznajmy-sie" class="links">Poznajmy się</a></li>
-            <li><a href="#klienci-indywidualni" class="links">Klienci indywidualni</a></li>
-            <li><a href="#deweloperzy" class="links">Deweloperzy</a></li>
-            <li>
-              <a href="#firmy-i-przedsiebiorstwa" class="links">Firmy i przedsiebiorstwa</a>
-            </li>
-          </ul>
+          <nav class="flex space-x-5 menu2" id="navbar">
+            <a href="#home" class="hidden">Poznajmy się</a>
+            <a href="#poznajmy-sie">Poznajmy się</a>
+            <a href="#klienci-indywidualni">Klienci indywidualni</a>
+            <a href="#deweloperzy">Deweloperzy</a></li>
+            <a href="#firmy-i-przedsiebiorstwa">Firmy i przedsiebiorstwa</a>
+          </nav>
         </div>
 
         <a href=" #kontakt"
-          class="flex items-center px-4 py-4 mr-6 font-semibold text-teal-900 border shadow rounded-xl border-teal-900/10 bg-teal-200/50 hover:bg-teal-600 hover:text-white"
+          class="flex items-center px-2 py-2 mr-6 font-semibold text-teal-900 border shadow rounded-xl border-teal-900/10 bg-teal-200/50 hover:bg-teal-600 hover:text-white"
           :class="{ 'rounded-full bg-teal-50': atTop }"><ion-icon name="moon-outline"
-            class="text-2xl font-semibold"></ion-icon></a>
-      </nav>
+            class="text-xl font-semibold"></ion-icon></a>
+      </div>
 
       <div class="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
         <div class="mb-16 lg:my-40 lg:pr-5 lg:w-1/2">
@@ -85,7 +87,7 @@
     </div>
   </section>
 
-  <section id="poznajmy-sie" class="mt-24 bg-gray-100 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
+  <section id="poznajmy-sie" class="mt-24 bg-gray-100 scroll-mt-24 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
     <div
       class="flex-row-reverse overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl">
       <div class="lg:w-1/2">
@@ -196,7 +198,7 @@
     </div>
   </section>
 
-  <section class="mt-24 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
+  <section id="klienci-indywidualni" class="mt-32 scroll-mt-24 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
     <div
       class="overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl">
       <div class="lg:w-1/2">
@@ -239,7 +241,7 @@
     </div>
   </section>
 
-  <section id="deweloperzy" class="mt-24 bg-gray-100 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
+  <section id="deweloperzy" class="mt-24 bg-gray-100 scroll-mt-24 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
     <div
       class="flex-row-reverse overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl">
       <div class="lg:w-1/2">
@@ -281,6 +283,40 @@
         </p>
         <p class="text-gray-500 dark:text-gray-300">
           Utwardzimy ci teren , wykonamy tymczasową drogę dojazdową, np. z płyt drogowych.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="firmy-i-przedsiebiorstwa" class="mt-24 scroll-mt-24 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
+    <div
+      class="overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl">
+      <div class="lg:w-1/2">
+        <div class="h-64 bg-cover lg:h-full" style="background-image: url('img/3.jpg')"></div>
+      </div>
+
+      <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
+          Firmy i <span class="text-teal-500">przedsiebiorstwa</span>
+        </h2>
+
+        <p class="mt-4 text-gray-500 dark:text-gray-300">
+          Realizujemy mniejsze, jak i większe (kilka - kilkanaście tysięcy m2) inwestycje, w tym:
+        </p>
+        <ul class="mt-2 text-gray-500 dark:text-gray-300 list">
+          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>drogi, parkingi,</span< /li>
+          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>place manewrowe, przeładunkowe, </span></li>
+          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>rampy załadunkowe,</span></li>
+          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>drogi dojazdowe, tymczasowe,</span></li>
+          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>kompleksowe roboty ziemne (wykopy, wywóz ziemi,
+              niwelacja terenu)</span></li>
+          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>roboty odwodnieniowe (kanalizacja deszczowa,
+              odwodnienia liniowe).</span></li>
+        </ul>
+
+        <p class="mt-2 text-gray-500 dark:text-gray-300">
+          Oferujemy również <strong>maszynowe</strong> układanie kostki.
         </p>
 
       </div>
@@ -331,73 +367,35 @@
     </div>
   </section>
 
-  <section id="firmy-i-przedsiebiorstwa" class="mt-24 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
-    <div
-      class="overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl">
-      <div class="lg:w-1/2">
-        <div class="h-64 bg-cover lg:h-full" style="background-image: url('img/3.jpg')"></div>
-      </div>
+  <footer x-show="atTop" x-transition:enter="transition ease-out duration-100"
+    x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-1000 scale-100"
+    x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100"
+    x-transition:leave-end="opacity-0 scale-90"
+    class="fixed w-full px-6 py-2 text-sm text-center -translate-x-1/2 border-b shadow-md top-16 left-1/2 border-x border-teal-300/10 bg-teal-50 text-zinc-500"
+    :class="atTop ? '' : 'hidden2'">
 
-      <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
-        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
-          Firmy i <span class="text-teal-500">przedsiebiorstwa</span>
-        </h2>
+    <p class="flex items-center max-w-xs mx-auto">
+      <ion-icon name="call-outline" class="mr-2"></ion-icon><span class="mr-6">+48 515 698 789</span>
+      <ion-icon name="mail-outline" class="mr-2"></ion-icon><span>biuro@kontakt.pl</span>
+    </p>
 
-        <p class="mt-4 text-gray-500 dark:text-gray-300">
-          Realizujemy mniejsze, jak i większe (kilka - kilkanaście tysięcy m2) inwestycje, w tym:
-        </p>
-        <ul class="mt-2 text-gray-500 dark:text-gray-300 list">
-          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>drogi, parkingi,</span< /li>
-          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>place manewrowe, przeładunkowe, </span></li>
-          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>rampy załadunkowe,</span></li>
-          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>drogi dojazdowe, tymczasowe,</span></li>
-          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>kompleksowe roboty ziemne (wykopy, wywóz ziemi,
-              niwelacja terenu)</span></li>
-          <li><ion-icon name="checkmark-done-outline"></ion-icon> <span>roboty odwodnieniowe (kanalizacja deszczowa,
-              odwodnienia liniowe).</span></li>
-        </ul>
-
-        <p class="mt-2 text-gray-500 dark:text-gray-300">
-          Oferujemy również <strong>maszynowe</strong> układanie kostki.
-        </p>
-
-      </div>
-    </div>
-  </section>
-  <footer
-    class="bottom-0 w-full px-6 py-2 text-sm text-center -translate-x-1/2 border-t border-x border-teal-300/10 bg-zinc-50 max-w-7xl left-1/2 text-zinc-500"
-    :class="{ fixed : atTop}">
-    <div class="flex items-center justify-between mx-auto max-w-7xl">
-      <p>Best - Bruk © 2023r.</p>
-      <p class="flex items-center">
-        <ion-icon name="call-outline" class="mr-2"></ion-icon><span class="mr-2">+48 515 698 789</span>
-        <ion-icon name="mail-outline" class="mr-2"></ion-icon><span>biuro@kontakt.pl</span>
-      </p>
-    </div>
   </footer>
 
-  <script>
-    const li = document.querySelectorAll(".links");
-    // const lim = document.querySelectorAll(".m-links");
-    const sec = document.querySelectorAll("section");
 
-    console.log(li)
-    function activeMenu() {
-      let len = sec.length;
-      while (--len && window.scrollY + 180 < sec[len].offsetTop) { }
-      li.forEach((ltx) => ltx.classList.remove("active"));
-      li[len].classList.add("active");
-
-      // lim.forEach((ltx) => ltx.classList.remove("active"));
-      // lim[len].classList.add("active");
-    }
-    activeMenu();
-    window.addEventListener("scroll", function () {
-      activeMenu();
-    });
-  </script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/@sidsbrmnn/scrollspy@1.x/dist/scrollspy.min.js"></script>
+  <script>
+    window.onload = function () {
+      scrollSpy('#navbar', {
+        sectionSelector: 'section',
+        targetSelector: 'a',
+        offset: 96,
+        activeClass: 'active',
+      });
+    };
+
+  </script>
 </body>
 
 </html>

@@ -59,7 +59,7 @@ nav ul li a {
     background-position: 0 0;
   }
 } */
-nav ul.menu2 li::after {
+nav.menu2 a::after {
   content: "";
   width: 0%;
   height: 2px;
@@ -69,11 +69,10 @@ nav ul.menu2 li::after {
   --tw-bg-opacity: 1;
   background-color: rgb(17 94 89 / var(--tw-bg-opacity));
 }
-nav ul.menu2 li:hover::after {
+nav.menu2 a:hover::after {
   width: 100%;
 }
-nav ul.menu2 li a.links.active,
-nav ul.menu2 li::after {
+nav.menu2 a.active::after {
   width: 100%;
 }
 ul.list li {
