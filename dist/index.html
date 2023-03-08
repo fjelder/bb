@@ -12,7 +12,7 @@
   <link href="style.css" rel="stylesheet" />
   <script src="//unpkg.com/alpinejs" defer></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="simple-lightbox.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
 
 <body class="scroll-smooth" x-data="{ atTop: false }" x-init="atTop = (window.scrollY <= 0) ? false : true">
@@ -205,6 +205,69 @@
   </section>
 
 
+  <section id="-" class="mt-32 scroll-mt-24 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
+    <div data-aos="zoom-in"
+      class="overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl">
+      <div class="lg:w-1/2">
+
+        <div class="grid w-full grid-cols-3 gap-1">
+          <a href="img/small/1.jpg" class="glightbox bg-cover bg-center h-56 bg-[url('/img/small/1.jpg')]"
+            data-gallery="gallery2"></a>
+          <a href="img/small/2.jpg" class="glightbox bg-cover bg-center h-56 bg-[url('/img/small/2.jpg')]"
+            data-gallery="gallery2"></a>
+          <a href="img/small/12.jpg" class="glightbox bg-cover bg-center h-56 bg-[url('/img/small/12.jpg')]"
+            data-gallery="gallery2"></a>
+          <a href="img/small/3.jpg"
+            class="glightbox col-span-2 row-span-2 bg-red-300 bg-cover bg-center h-80 bg-[url('/img/small/3.jpg')]"
+            data-gallery="gallery2"></a>
+          <a href="img/small/7.jpg" class="glightbox bg-cover bg-center h-38 bg-[url('/img/small/7.jpg')]"
+            data-gallery="gallery2"></a>
+          <a href="img/small/8.jpg" class="glightbox bg-cover bg-center h-38 bg-[url('/img/small/8.jpg')]"
+            data-gallery="gallery2"></a>
+          <a href="img/small/16.jpg" class="glightbox bg-cover bg-center h-38 bg-[url('/img/small/15.jpg')] hidden"
+            data-gallery="gallery2"></a>
+          <a href="img/small/15.jpg" class="glightbox bg-cover bg-center h-38 bg-[url('/img/small/16.jpg')] hidden"
+            data-gallery="gallery2"></a>
+        </div>
+
+      </div>
+
+      <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
+          Klienci <span class="text-teal-500">indywidualni</span>
+        </h2>
+
+        <p class="mt-4 text-gray-500 dark:text-gray-300">
+          Masz dosyć ciągłego wnoszenia piasku i błota do domu?
+        </p>
+        <p class="text-gray-500 dark:text-gray-300">
+          Z nami wylądujesz na <strong>bruku!</strong>
+        </p>
+        <p class="mt-2 text-gray-500 dark:text-gray-300">
+          Wykonujemy:
+        </p>
+        <ul class="mt-2 text-gray-500 dark:text-gray-300 list">
+          <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>dojazdy,</span< /li>
+          <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>podjazdy i wjazdy,</span></li>
+          <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>wejścia, obejścia, przejścia,</span></li>
+          <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>palisady, tarasy, schody,</span></li>
+          <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>odwodnienia z dachów, przyłącza kanalizacyjne,
+              kratki odwodnieniowe,</span></li>
+          <li><ion-icon name="arrow-forward-outline"></ion-icon> <span>montaż ogrodzeń i płotów panelowych.</span></li>
+        </ul>
+
+        <p class="mt-2 text-gray-500 dark:text-gray-300">
+          Wykończyłeś dom i brakuje środków?
+        </p>
+        <p class="text-gray-500 dark:text-gray-300">
+          Utwardzimy dojazd lub wykonamy
+          podbudowę pod przyszłą inwestycję.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
   <section id="klienci-indywidualni" class="mt-32 scroll-mt-24 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
     <div data-aos="zoom-in"
       class="overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl">
@@ -215,7 +278,7 @@
             <p
               class="absolute inline-block px-3 py-px mx-8 mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-lg top-2 bg-zinc-200">
               Realizacje</p>
-            <div class="flex items-center w-full px-4 pt-10 pb-5 mb-3 rounded-sm bg-white/30 gallery">
+            <div class="flex items-center w-full px-4 pt-10 pb-5 mb-3 rounded-sm gallery">
 
               <div
                 class="flex items-center h-20 mr-2 transition-all cursor-pointer bg-zinc-300/50 hover:bg-zinc-300/80">
@@ -226,9 +289,12 @@
                 </svg>
               </div>
 
-              <a href="img/small/1.jpg"><img src="img/small/11.jpg" alt="" title="Beautiful Image" /></a>
-              <a href="img/small/2.jpg"><img src="img/small/2.jpg" alt="" title="" /></a>
-              <a href="img/small/3.jpg"><img src="img/small/3.jpg" alt="" title="Beautiful Image" /></a>
+              <a href="img/small/1.jpg" data-description="description here" data-desc-position="right" class="glightbox"
+                data-gallery="gallery1"><img src="img/small/1.jpg" alt="" title="Beautiful Image" /></a>
+              <a href="img/small/2.jpg" data-fslightbox="first-lightbox" class="glightbox" data-gallery="gallery1"><img
+                  src="img/small/2.jpg" alt="" title="" /></a>
+              <a href="img/small/3.jpg" data-fslightbox="first-lightbox" class="glightbox" data-gallery="gallery2"><img
+                  src="img/small/3.jpg" alt="" title="Beautiful Image" /></a>
 
               <div class="flex items-center h-20 ml-2 cursor-pointer bg-zinc-300/50 hover:bg-zinc-300/80">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -278,8 +344,6 @@
       </div>
     </div>
   </section>
-
-
 
   <section id="deweloperzy" class="mt-24 bg-gray-100 scroll-mt-24 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
     <div data-aos="flip-up"
@@ -497,6 +561,7 @@
 
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -506,13 +571,14 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://unpkg.com/@sidsbrmnn/scrollspy@1.x/dist/scrollspy.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.js"
-    integrity="sha512-QoopN2y0b53eP+J2BNc1ff4ImedQAt2xDdhLQkUzTCyfniKkUlHbhweoYxDhCY78Z5EnMtY5rLtjtTK0Yc9Jcw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
-    (function () {
-      var $gallery = new SimpleLightbox('.gallery a', {});
-    })();
+
+    const lightbox = GLightbox({
+      loop: true,
+      slideEffect: 'fade',
+      moreText: 'Więcej'
+    });
+
     window.onload = function () {
       scrollSpy('#navbar', {
         sectionSelector: 'section',

@@ -12,6 +12,9 @@
   "author": "Fjelder",
   "license": "ISC",
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.58.3",
     "tailwindcss": "^3.2.7"
   },
   "dependencies": {

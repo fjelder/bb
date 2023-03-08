@@ -2056,6 +2056,14 @@ html {
   z-index: 10;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -2196,6 +2204,10 @@ html {
   height: 2rem;
 }
 
+.h-80 {
+  height: 20rem;
+}
+
 .h-96 {
   height: 24rem;
 }
@@ -2269,6 +2281,10 @@ html {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-row-reverse {
   flex-direction: row-reverse;
 }
@@ -2303,6 +2319,10 @@ html {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .gap-5 {
@@ -2398,6 +2418,11 @@ html {
   background-color: rgb(66 66 66 / var(--tw-bg-opacity));
 }
 
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 115 115 / var(--tw-bg-opacity));
+}
+
 .bg-teal-200\/50 {
   background-color: rgb(128 203 196 / 0.5);
 }
@@ -2417,10 +2442,6 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-white\/30 {
-  background-color: rgb(255 255 255 / 0.3);
-}
-
 .bg-zinc-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(228 228 231 / var(--tw-bg-opacity));
@@ -2435,8 +2456,44 @@ html {
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 
+.bg-\[url\(\'\/img\/small\/1\.jpg\'\)\] {
+  background-image: url('/img/small/1.jpg');
+}
+
+.bg-\[url\(\'\/img\/small\/12\.jpg\'\)\] {
+  background-image: url('/img/small/12.jpg');
+}
+
+.bg-\[url\(\'\/img\/small\/15\.jpg\'\)\] {
+  background-image: url('/img/small/15.jpg');
+}
+
+.bg-\[url\(\'\/img\/small\/16\.jpg\'\)\] {
+  background-image: url('/img/small/16.jpg');
+}
+
+.bg-\[url\(\'\/img\/small\/2\.jpg\'\)\] {
+  background-image: url('/img/small/2.jpg');
+}
+
+.bg-\[url\(\'\/img\/small\/3\.jpg\'\)\] {
+  background-image: url('/img/small/3.jpg');
+}
+
+.bg-\[url\(\'\/img\/small\/7\.jpg\'\)\] {
+  background-image: url('/img/small/7.jpg');
+}
+
+.bg-\[url\(\'\/img\/small\/8\.jpg\'\)\] {
+  background-image: url('/img/small/8.jpg');
+}
+
 .bg-cover {
   background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .fill-zinc-800 {
